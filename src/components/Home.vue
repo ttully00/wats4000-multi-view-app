@@ -3,8 +3,11 @@
     <div class="form-container" v-show="showForm">
       <h1>Join the Web Developers Club!</h1>
       <p>Sign up to access our special, secret page. Just create an account and answer a brief survey.</p>
+
       <p class="error" v-show="showError">Please check the information you have entered. Be sure to fill in all fields.</p>
+
       <form v-on:submit.prevent="validateForm">
+
         <p><label for="username">Username <input type="text" id="username" v-model="username"></label></p>
         <p><label for="email">Email <input type="email" id="email" v-model="email"></label></p>
         <p><label for="password">Password <input type="password" id="password" v-model="password"></label></p>
@@ -15,7 +18,7 @@
     </div>
     <div class="success-message" v-show="!showForm">
       <h1>Thank you for signing up!</h1>
-      <p>Please take our new member survey. Click here</p><!-- TODO: Link "Click here" to the survey page. -->
+      <p>Please take our new member survey. <router-link to="/survey">Click here</router-link></p>
     </div>
   </div>
 </template>
