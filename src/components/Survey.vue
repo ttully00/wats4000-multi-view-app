@@ -8,14 +8,14 @@
         <p><label for="q1">Q1: How long have you been building websites?<br><input type="text" id="q1" v-model="q1"></label></p>
 
         <p>Q2: What languages interest you the most?<br>
-          <label v-for="language in languageOptions">
+          <label -v-for="language in languageOptions">
             <input type="checkbox" v-model="q2" v-bind:value="language.value">
             {{ language.text }}
           </label>
         </p>
 
         <p>Q3: What other topics interest you?<br>
-          <label v-for="topic in topicOptions">
+          <label -v-for="topic in topicOptions">
             <input type="checkbox" v-model="q3" v-bind:value="topic.value">
             {{ topic.text }}
           </label>
